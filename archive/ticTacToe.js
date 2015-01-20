@@ -52,91 +52,55 @@ var goO = "| O |";
 function handleButton1() {
 	span1.innerHTML = goX;
 	winLose();
-	if (hasWon == false && hasLost == false && isDraw == false) { //if there is no win/lose/draw condition, computer plays a turn. Else, reset the board.
-		computerTurn(); //why does this function call only work when the "()" are included on the end?
-	} else {
-		reset();
-	}
+	computerTurn(); //why does this function call only work when the "()" are included on the end?
 }
 
 function handleButton2() {
 	span2.innerHTML = goX;
 	winLose();
-	if (hasWon == false && hasLost == false && isDraw == false) {
-		computerTurn();
-	} else {
-		reset();
-	}
+	computerTurn();
 }
 
 function handleButton3() {
 	span3.innerHTML = goX;
 	winLose();
-	if (hasWon == false && hasLost == false && isDraw == false) {
-		computerTurn();
-	} else {
-		reset();
-	}
+	computerTurn();
 }
 
 function handleButton4() {
 	span4.innerHTML = goX;
 	winLose();
-	if (hasWon == false && hasLost == false && isDraw == false) {
-		computerTurn();
-	} else {
-		reset();
-	}
+	computerTurn();
 }
 
 function handleButton5() {
 	span5.innerHTML = goX;
 	winLose();
-	if (hasWon == false && hasLost == false && isDraw == false) {
-		computerTurn();
-	} else {
-		reset();
-	}
+	computerTurn();
 }
 
 function handleButton6() {
 	span6.innerHTML = goX;
 	winLose();
-	if (hasWon == false && hasLost == false && isDraw == false) {
-		computerTurn();
-	} else {
-		reset();
-	}
+	computerTurn();
 }
 
 function handleButton7() {
 	span7.innerHTML = goX;
 	winLose();
-	if (hasWon == false && hasLost == false && isDraw == false) {
-		computerTurn();
-	} else {
-		reset();
-	}
+	computerTurn();
 }
 
 function handleButton8() {
 	span8.innerHTML = goX;
 	winLose();
-	if (hasWon == false && hasLost == false && isDraw == false) {
-		computerTurn();
-	} else {
-		reset();
-	}
+	computerTurn();
 }
 
 function handleButton9() {
 	span9.innerHTML = goX;
 	winLose();
-	if (hasWon == false && hasLost == false && isDraw == false) {
-		computerTurn();
-	} else {
-		reset();
-	}
+	computerTurn();
 }
 
 var hasWon = false; //global variable used to test whether the user has won. If true, computer will not play another move.
@@ -149,9 +113,6 @@ function computerTurn() {
 		//more advanced computer move functions should go here
 		randomMove();
 		winLose();
-		if (hasLost == true) {
-			reset();
-		}
 	}
 }
 
@@ -235,25 +196,7 @@ function drawTest() {
 	}
 }
 
-
-//resets the board if win/lose/draw occurs after clearing the alert. Called in each handleButton function and the computerTurn function.
-function reset() {
-	span1.innerHTML = "<input type=\"button\" id=\"button1\" value=\"X\">";
-	span2.innerHTML = "<input type=\"button\" id=\"button2\" value=\"X\">";
-	span3.innerHTML = "<input type=\"button\" id=\"button3\" value=\"X\">";
-	span4.innerHTML = "<input type=\"button\" id=\"button4\" value=\"X\">";
-	span5.innerHTML = "<input type=\"button\" id=\"button5\" value=\"X\">";
-	span6.innerHTML = "<input type=\"button\" id=\"button6\" value=\"X\">";
-	span7.innerHTML = "<input type=\"button\" id=\"button7\" value=\"X\">";
-	span8.innerHTML = "<input type=\"button\" id=\"button8\" value=\"X\">";
-	span9.innerHTML = "<input type=\"button\" id=\"button9\" value=\"X\">";
-	hasWon = false;
-	hasLost = false;
-	isDraw = false;
-	init();
-}
-
-/* function threeInARow() { // A new function to include in computerTurn to enhance AI
+function threeInaRow() {
 
 	//arrays representing winning combinations
 	var win1 = [span1, span2, span3];
@@ -268,13 +211,13 @@ function reset() {
 	var winArray = [win1, win2, win3, win4, win5, win6, win7, win8]; //Array containing all the win arrays to make them available in a loop
 	var w = 0;
 	var winX;
-
+/*
 	Pseudocode
 	-check each win array for a span that already contains one or more goO's
 	-from these arrays, if there is a win array that has two goOs instead of one, choose that one
 	-if it contains a goX, move on
 	-
 
+*/
 
-
-} */
+}
